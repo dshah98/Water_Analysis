@@ -28,22 +28,3 @@ barplot(z,
         #                "Tarsadi (M)", "Kansad (M)", "Sachin (CT)", "Kadodara (CT)","Chalthan (CT)", 
         #                "Bareja (M)", "Kim (CT)", "Mandvi (M)", "Barwala (M)", "Ranpur (CT)","Kosamba (CT)"))
         )
-        
-
-
-# Ahm = subset(data, data$District.Name == "AHMADABAD")
-# Urban = subset(Ahm, Town.Name=="Ahmadabad (M Corp.)" | Town.Name=="Sanand (M + OG)" | Town.Name=="Dholka (M + OG)" | 
-#                  Town.Name=="Viramgam (M)" | Town.Name=="Bavla (M + OG)" | Town.Name=="Bopal (CT)" | 
-#                  Town.Name=="Dhandhuka (M)" | Town.Name=="Bareja (M)" | Town.Name=="Barwala (M)" | Town.Name=="Ranpur (CT)")
-# 
-# Source = cbind (Urban$Tapwater.from.treated.source, Urban$Tapwater.from.un.treated.source, Urban$Covered.well, 
-#                 Urban$Un.covered.well, Urban$Handpump, Urban$Tubewell.Borehole, Urban$Spring, 
-#                 Urban$River..Canal, Urban$Tank..Pond..Lake, Urban$Other.sources)
-# 
-# barplot(Source, names.arg = c("Tap.treated", "Tap.untreated", "Covered Well", "Uncovered Well", "Handpump", "Tubewell", 
-#                               "Spring", "River/Canal", "Tank/Pond/Lake", "Others"), 
-#         beside=T, ylim=c(0,100), main= "Dependence on Different Sources", 
-#         col = c("black", "red", "yellow", "green", "blue", "orange", "brown", "white", 'grey', 'purple'), 
-#         legend.text= c("Ahmadabad (M Corp.)", "Sanand (M + OG))", "Dholka (M + OG)", "Viramgam (M)", 
-#                        "Bavla (M + OG)", "Bopal (CT)", "Dhandhuka (M)","Bareja (M)", "Barwala (M)", "Ranpur (CT)"), 
-#         xlab= "Different Sources", ylab="Dependence")

@@ -13,17 +13,4 @@ j = sum(main$Others[1:13])
 
 z = c(a,b,c,d,e,f,g,h,i,j)
 
-
-# UrbanA = subset(data, data$District.Name == "AHMADABAD")
-# TreatedTap = sum(UrbanA$Tapwater.from.treated.source)
-# UntreatedTap = sum(UrbanA$Tapwater.from.un.treated.source)
-# CoveredWell = sum(UrbanA$Covered.well)
-# UncoveredWell = sum(UrbanA$Un.covered.well)
-# HPump = sum(UrbanA$Handpump)  
-# Tubewell = sum(UrbanA$Tubewell.Borehole)
-# SpringS = sum(UrbanA$Spring)
-# River = sum(UrbanA$River..Canal)
-# Tank = sum(UrbanA$Tank..Pond..Lake)
-# Oth = sum(UrbanA$Other.sources)
-# z = c(TreatedTap,UntreatedTap,CoveredWell,UncoveredWell,HPump,Tubewell,SpringS,River,Tank,Oth)
 pie(z, labels = paste(round(z/sum(z)*100), "%"))
