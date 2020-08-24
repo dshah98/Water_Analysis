@@ -20,12 +20,16 @@ barplot(z,
         xlab = "Diffent Sources",
         ylab = "Dependence",
         main= "Dependence on Different Sources",
-        col = c("#FF0000", "#FF8000", "#FFFF00", "#80FF00", "#00FF00", "#00FF80", "#00FFFF", "#0080FF", 
-                '#0000FF', '#7F00FF'),
-        legend = c("Ahmadabad (M Corp.)", "Surat (M Corp.)", "Sanand (M + OG)", "Dholka (M + OG)", 
-                       "Bardoli (M)", "Viramgam (M)", "Bavla (M + OG)", "Bopal (CT)", "Dhandhuka (M)",
-                       "Tarsadi (M)", "Kansad (M)", "Sachin (CT)", "Kadodara (CT)","Chalthan (CT)", 
-                       "Bareja (M)", "Kim (CT)", "Mandvi (M)", "Barwala (M)", "Ranpur (CT)","Kosamba (CT)"))
+        col = c("#FF0000", "#F08080", "#D2691E","#FFD700", "#BDB76B", "#FFFF00", "#4B0082",  '#00FFFF', 
+                "#006400","#7CFC00", '#7FFFD4', "#8A2BE2", "#8B008B", "#F5DEB3", "#8B4513", "#BC8F8F",
+                "#708090", "#000000", "#A9A9A9",  "#FF1493"),
+        # legend = c("Ahmadabad (M Corp.)", "Surat (M Corp.)", "Sanand (M + OG)", "Dholka (M + OG)", 
+        #                "Bardoli (M)", "Viramgam (M)", "Bavla (M + OG)", "Bopal (CT)", "Dhandhuka (M)",
+        #                "Tarsadi (M)", "Kansad (M)", "Sachin (CT)", "Kadodara (CT)","Chalthan (CT)", 
+        #                "Bareja (M)", "Kim (CT)", "Mandvi (M)", "Barwala (M)", "Ranpur (CT)","Kosamba (CT)"))
+        )
+        
+
 
 # Ahm = subset(data, data$District.Name == "AHMADABAD")
 # Urban = subset(Ahm, Town.Name=="Ahmadabad (M Corp.)" | Town.Name=="Sanand (M + OG)" | Town.Name=="Dholka (M + OG)" | 
