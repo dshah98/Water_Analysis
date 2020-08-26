@@ -11,8 +11,8 @@ hist(b, xlab = "Ahmedabad Sub District",
 
 # Frequency
 summary(b)
-(97.50 - 1)/4
-breaks = seq(1, 100, by=24)
+(78.6 - 1)/4
+breaks = seq(1, 100, by=19)
 time.cut = cut(b, breaks, right = FALSE)
 time.freq = table(time.cut)
 time.freq

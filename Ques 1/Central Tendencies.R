@@ -7,8 +7,8 @@ b = main$Tapwater.from.un.treated.source[1:13]
 
 
 # Mean
-print(mean(a))
-print(mean(b))
+mean(a)
+mean(b)
 
 
 # Geometric Mean
