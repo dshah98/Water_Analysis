@@ -4,7 +4,6 @@
 
 # Histogram
 b = main$Tapwater.from.un.treated.source[1:13]
-b
 hist(b, xlab = "Ahmedabad Sub District",
      ylab = "Frequency", 
      main = "Histogram for Tapwater from Un-Treated Source")
@@ -19,7 +18,8 @@ time.cut = cut(b, breaks, right = FALSE)
 time.freq = table(time.cut)
 time.freq
 
-barplot(time.freq, 
-        main = "Frequency Distribution of Un-Tapwater from Treated Source",
-        xlab = "Class", 
-        ylab = "Frequency")
+plot(time.freq, type = "o",
+     main = "Frequency Distribution of Un-Tapwater from Treated Source",
+     xlab = "Class", 
+     ylab = "Frequency",
+     col = "green")

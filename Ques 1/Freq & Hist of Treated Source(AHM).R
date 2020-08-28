@@ -17,6 +17,9 @@ time.cut = cut(b, breaks, right = FALSE)
 time.freq = table(time.cut)
 time.freq
  
-barplot(time.freq,
-        main = "Frequency Distribution of Tapwater from Treated Source",
-        xlab = "Class", ylab = "Frequency")
+
+plot(time.freq, type = "o",
+     main = "Frequency Distribution of Tapwater from Treated Source",
+     xlab = "Class", 
+     ylab = "Frequency",
+     col = "green")
