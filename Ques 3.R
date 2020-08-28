@@ -6,4 +6,4 @@ barplot(b,
         main = "Status of Groundwater (TubeWell) Dependence",
         xlab = "Urban Centers of Ahmedabad District",
         ylab = "Tubewell/Borehole Data",
-        col = "red")
+        col = "green")
