@@ -1,16 +1,19 @@
 # 5. Prepare appropriate graphs to show and compare the dependence on different sources of water for the top 20 
 #     (by population) urban centres.
 
-Treated = main1$Tapwater.from.treated.source[1:20]
-Untreated = main1$Tapwater.from.un.treated.source[1:20]
-CWell = main1$Covered.well[1:20]
-UnWell = main1$Un.covered.well[1:20]
-Handpump = main1$Handpump[1:20]
-Tubewell = main1$Tubewell.Borehole[1:20]
-Spring = main1$Spring[1:20]
-River = main1$River..Canal[1:20]
-Tank = main1$Tank..Pond..Lake[1:20]
-Oth = main1$Other.sources[1:20]
+# Sorted by Population
+sorted = water_data[with(water_data, order(-Total.Population.of.Town)),]
+
+Treated = sorted$Tapwater.from.treated.source[1:20]
+Untreated = sorted$Tapwater.from.un.treated.source[1:20]
+CWell = sorted$Covered.well[1:20]
+UnWell = sorted$Un.covered.well[1:20]
+Handpump = sorted$Handpump[1:20]
+Tubewell = sorted$Tubewell.Borehole[1:20]
+Spring = sorted$Spring[1:20]
+River = sorted$River..Canal[1:20]
+Tank = sorted$Tank..Pond..Lake[1:20]
+Oth = sorted$Other.sources[1:20]
 
 z = cbind(Treated, Untreated, CWell, UnWell, Handpump, Tubewell, Spring, River, Tank, Oth)
   

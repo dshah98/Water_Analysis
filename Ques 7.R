@@ -1,7 +1,7 @@
 # 7. Compare the situation of Ahmedabad District with Surat District.
 
 
-UrbanA = subset(main, main$District == "AHMADABAD")
+UrbanA = subset(water_data, water_data$District == "AHMADABAD")
 Treated = sum(UrbanA[c(6)])
 Untreated = sum(UrbanA[c(7)])
 CWell = sum(UrbanA[c(8)])
@@ -22,7 +22,7 @@ Open = sum(UrbanA[c(22)])
 tryA= cbind(Treated, Untreated, CWell, UnC_Well, Handpump, Tubewell, Spring, River, Tank, Oth, Toilet, PSewer,
             STank, Other, Pit_Lat, Pub_Lat, Open)
 
-UrbanS = subset(main, main$District == "SURAT")
+UrbanS = subset(water_data, water_data$District == "SURAT")
 Treated1 = sum(UrbanS[c(6)])
 Untreated1 = sum(UrbanS[c(7)])
 CWell1 = sum(UrbanS[c(8)])

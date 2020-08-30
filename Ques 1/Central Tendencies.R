@@ -2,8 +2,8 @@
 #   c. Calculate the central tendencies for these two sources.
 
 
-a = main$Tapwater.from.treated.source[1:13]
-b = main$Tapwater.from.un.treated.source[1:13]
+a = water_data$Tapwater.from.treated.source[1:13]
+b = water_data$Tapwater.from.un.treated.source[1:13]
 
 
 # Mean

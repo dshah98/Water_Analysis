@@ -3,7 +3,7 @@
 
 
 # Histogram
-b = main$Tapwater.from.treated.source[1:13]
+b = water_data$Tapwater.from.treated.source[1:13]
 hist(b, xlab = "Ahmedabad Sub District",
      ylab = "Frequency", 
      main = "Histogram for Tapwater from Treated Source")
@@ -11,8 +11,8 @@ hist(b, xlab = "Ahmedabad Sub District",
 
 # Frequency
 summary(b)
-(78.6 - 1)/4
-breaks = seq(1, 100, by=19)
+(97.5 - 1)/4
+breaks = seq(1, 125, by=24)
 time.cut = cut(b, breaks, right = FALSE)
 time.freq = table(time.cut)
 time.freq

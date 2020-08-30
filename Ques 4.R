@@ -2,16 +2,16 @@
 #   a. create appropriate graphs that clearly show the levels of dependence on different sources of water. 
 #   b. Compare this against Ahmedabad Corporation
 
-Treated = main$Tapwater.from.treated.source[4:9]
-Untreated = main$Tapwater.from.un.treated.source[4:9]
-CWell = main$Covered.well[4:9]
-UnC_Well = main$Un.covered.well[4:9]
-Handpump = main$Handpump[4:9]
-Tubewell = main$Tubewell.Borehole[4:9]
-Spring = main$Spring[4:9]
-River = main$River..Canal[4:9]
-Tank = main$Tank..Pond..Lake[4:9]
-Oth = main$Others[4:9]
+Treated = water_data$Tapwater.from.treated.source[4:9]
+Untreated = water_data$Tapwater.from.un.treated.source[4:9]
+CWell = water_data$Covered.well[4:9]
+UnC_Well = water_data$Un.covered.well[4:9]
+Handpump = water_data$Handpump[4:9]
+Tubewell = water_data$Tubewell.Borehole[4:9]
+Spring = water_data$Spring[4:9]
+River = water_data$River..Canal[4:9]
+Tank = water_data$Tank..Pond..Lake[4:9]
+Oth = water_data$Others[4:9]
 
 x = cbind(Treated, Untreated, CWell, UnC_Well, Handpump, Tubewell, Spring, River, Tank, Oth)
 
