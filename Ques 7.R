@@ -1,7 +1,10 @@
 # 7. Compare the situation of Ahmedabad District with Surat District.
 
+# Importing Data
+Water_Data = read.csv("water_data.csv")
 
-UrbanA = subset(water_data, water_data$District == "AHMADABAD")
+# Selecting Data of Ahmedabad
+UrbanA = subset(Water_Data, Water_Data$District == "AHMADABAD")
 Treated = sum(UrbanA[c(6)])
 Untreated = sum(UrbanA[c(7)])
 CWell = sum(UrbanA[c(8)])
@@ -22,7 +25,8 @@ Open = sum(UrbanA[c(22)])
 tryA= cbind(Treated, Untreated, CWell, UnC_Well, Handpump, Tubewell, Spring, River, Tank, Oth, Toilet, PSewer,
             STank, Other, Pit_Lat, Pub_Lat, Open)
 
-UrbanS = subset(water_data, water_data$District == "SURAT")
+# Selecting Data of Surat
+UrbanS = subset(Water_Data, Water_Data$District == "SURAT")
 Treated1 = sum(UrbanS[c(6)])
 Untreated1 = sum(UrbanS[c(7)])
 CWell1 = sum(UrbanS[c(8)])
@@ -43,6 +47,13 @@ Open1 = sum(UrbanS[c(22)])
 tryS = cbind(Treated1, Untreated1, CWell1, UnC_Well1, Handpump1, Tubewell1, Spring1, River1, Tank1, Oth1, Toilet1, 
              PSewer1, STank1, Other1, Pit_Lat1, Pub_Lat1, Open1)
 
+# Combining Data
 c = rbind(tryA,tryS)
+
+# Plotting
 barplot(c,beside=TRUE,
-        legend.text = c("AHMEDABAD", "SURAT"))
+        col = c("black", "grey"))
+legend(x = "topright",
+       legend = c("Ahmedabad", "Surat"),
+       cex = 0.8,
+       fill = c("black", "grey"))
