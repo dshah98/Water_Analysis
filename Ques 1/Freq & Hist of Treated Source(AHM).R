@@ -10,6 +10,7 @@ Tap_Treated = Water_Data$Tapwater.from.treated.source[1:13]
 
 # Histogram
 hist(Tap_Treated, xlab = "Ahmedabad Sub District",
+     freq = TRUE,
      ylab = "Frequency", 
      main = "Histogram for Tapwater from Treated Source")
 

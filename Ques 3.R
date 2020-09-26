@@ -8,7 +8,7 @@ Tubwell = Water_Data$Tubewell.Borehole[1:13]
 
 # Plotting
 barplot(Tubwell,
-        names.arg = Water_Data$Sub.District.Name[1:13],
+        names.arg = Water_Data$Town.Name[1:13],
         main = "Status of Groundwater (TubeWell) Dependence",
         xlab = "Urban Centers of Ahmedabad District",
         ylab = "Tubewell/Borehole Data",
