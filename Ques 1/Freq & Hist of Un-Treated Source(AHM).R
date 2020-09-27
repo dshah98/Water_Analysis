@@ -25,7 +25,7 @@ time.freq
 
 # Ploting Frequency Distribution
 plot(time.freq, type = "o",
-     main = "Frequency Distribution of Un-Tapwater from Treated Source",
+     main = "Frequency Distribution of Tapwater from Un-Treated Source",
      xlab = "Class", 
      ylab = "Frequency",
      col = "green")

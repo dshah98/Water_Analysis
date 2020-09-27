@@ -6,28 +6,26 @@
 Water_Data = read.csv("water_data.csv")
 
 # Segrigating Data
-Treated = Water_Data$Tapwater.from.treated.source[4:9]
-Untreated = Water_Data$Tapwater.from.un.treated.source[4:9]
-CWell = Water_Data$Covered.well[4:9]
-UnC_Well = Water_Data$Un.covered.well[4:9]
-Handpump = Water_Data$Handpump[4:9]
-Tubewell = Water_Data$Tubewell.Borehole[4:9]
-Spring = Water_Data$Spring[4:9]
-River = Water_Data$River..Canal[4:9]
-Tank = Water_Data$Tank..Pond..Lake[4:9]
-Oth = Water_Data$Others[4:9]
+Ahm_Cor = as.factor(subset(Water_Data, Water_Data$Town.Name == "Ahmadabad (M Corp.)", select = c(6:15)))
+Bareja = as.factor(subset(Water_Data, Water_Data$Town.Name == "Bareja (M)", select = c(6:15)))
+Bopal = as.factor(subset(Water_Data, Water_Data$Town.Name == "Bopal (CT)", select = c(6:15)))
+Singarva = as.factor(subset(Water_Data, Water_Data$Town.Name == "Singarva (CT)", select = c(6:15)))
+Nandej = as.factor(subset(Water_Data, Water_Data$Town.Name == "Nandej (CT)", select = c(6:15)))
+Dholka = as.factor(subset(Water_Data, Water_Data$Town.Name == "Dholka (M + OG)", select = c(6:15)))
 
 # Combining Data
-x = cbind(Treated, Untreated, CWell, UnC_Well, Handpump, Tubewell, Spring, River, Tank, Oth)
+x = rbind(Ahm_Cor, Bareja, Bopal, Singarva, Nandej, Dholka)
 
 # Plotting
-barplot(x,beside = TRUE,
-        ylim = c(0,70),
-        col = c("black", "red", "yellow", "green", "blue", "orange"),
-        xlab = "Different Sources of Water",
-        ylab = "Five Urban Center Data")
-legend(x = "topright",
-       legend = c("Ahmedabad(M Corp.)", "Bareja (M)", "Bopal (CT)", "Singarba (CT)", "Nandej (CT)", 
-                  "Dholka (M + OG)"),
-       cex = 0.8,
-       fill = c("black", "red", "yellow", "green", "blue", "orange"))
+barplot(t(x),
+        main = "Comparing Ahmedabad Corr. with Water Sources",
+        col = c("#003d3d", "#004d4d", "#005757", "#006666", "#007070", "#009999", "#00b3b3", "#00cccc", 
+                "#00e6e6", "#00ffff"))
+legend(x = "top",
+       legend = c("Treated", "Untreated", "CWell", "UnC_Well", "Handpump", "Tubewell", "Spring", "River",
+                  "Tank", "Oth"),
+       cex = 0.7,
+       ncol = 3,
+       fill = c("#003d3d", "#004d4d", "#005757", "#006666", "#007070", "#009999", "#00b3b3", "#00cccc", 
+                "#00e6e6", "#00ffff"))
+

@@ -51,7 +51,7 @@ time.freq
 
 # Ploting Frequency Distribution
 plot(time.freq, type = "o",
-     main = "Frequency Distribution of Un-Tapwater from Treated Source",
+     main = "Frequency Distribution of Tapwater from Un-Treated Source",
      xlab = "Class", 
      ylab = "Frequency",
      col = "green")
@@ -105,32 +105,29 @@ barplot(Tubwell,
 # --------------------------------------------------------------------------------------------------- #
 
 # Segrigating Data
-Treated = Water_Data$Tapwater.from.treated.source[20:25]
-Untreated = Water_Data$Tapwater.from.un.treated.source[20:25]
-CWell = Water_Data$Covered.well[20:25]
-UnC_Well = Water_Data$Un.covered.well[20:25]
-Handpump = Water_Data$Handpump[20:25]
-Tubewell = Water_Data$Tubewell.Borehole[20:25]
-Spring = Water_Data$Spring[20:25]
-River = Water_Data$River..Canal[20:25]
-Tank = Water_Data$Tank..Pond..Lake[20:25]
-Oth = Water_Data$Others[20:25]
+Surat_Cor = as.factor(subset(Water_Data, Water_Data$Town.Name == "Surat (M Corp.)", select = c(6:15)))
+Hajira = as.factor(subset(Water_Data, Water_Data$Town.Name == "Hajira (INA)", select = c(6:15)))
+Magdalla = as.factor(subset(Water_Data, Water_Data$Town.Name == "Magdalla (INA)", select = c(6:15)))
+Sachin = as.factor(subset(Water_Data, Water_Data$Town.Name == "Sachin (INA)", select = c(6:15)))
+Kansad = as.factor(subset(Water_Data, Water_Data$Town.Name == "Kansad (M)", select = c(6:15)))
+Ichchhapor = as.factor(subset(Water_Data, Water_Data$Town.Name == "Ichchhapor (CT)", select = c(6:15)))
 
 # Combining Data
-x = cbind(Treated, Untreated, CWell, UnC_Well, Handpump, Tubewell, Spring, River, Tank, Oth)
+x = rbind(Surat_Cor, Hajira, Magdalla, Sachin, Kansad, Ichchhapor)
 
 # Plotting
-barplot(x,beside = TRUE,
-        ylim = c(0,100),
-        col = c("black", "red", "yellow", "green", "blue", "orange"),
-        main = "Barplot",
-        xlab = "Different Sources of Water",
-        ylab = "Five Urban Center Data")
+barplot(t(x),
+        main = "Comparing Surat Corr. with Water Sources",
+        col = c("#003d3d", "#004d4d", "#005757", "#006666", "#007070", "#009999", "#00b3b3", "#00cccc", 
+                "#00e6e6", "#00ffff"))
 legend(x = "topright",
-       legend = c("Surat(M Corp.)", "Hajira (INA)", "Magdalla (INA)", "Sachin (INA)", "Kansad (M)", 
-                  "Bharthana Kosad (CT)"),
-       cex = 0.8,
-       fill = c("black", "red", "yellow", "green", "blue", "orange"))
+       legend = c("Treated", "Untreated", "Covered Well", "UnCovered Well", "Handpump", "Tubewell", "Spring", "River",
+                  "Tank", "Oth"),
+       y.intersp = 0.8,
+       cex = 0.5,
+       ncol = 1,
+       fill = c("#003d3d", "#004d4d", "#005757", "#006666", "#007070", "#009999", "#00b3b3", "#00cccc", 
+                "#00e6e6", "#00ffff"))
 
 # --------------------------------------------------------------------------------------------------- #
 
